@@ -15,9 +15,9 @@ const DropdownUser = () => {
       >
         <span className="hidden text-right lg:block">
           <span className="block text-sm font-medium text-black dark:text-white">
-            Thomas Anree
+          Wiroon Choofong
           </span>
-          <span className="block text-xs">UX Designer</span>
+          <span className="block text-xs">Dev</span>
         </span>
 
         <span className="h-12 w-12 rounded-full">
@@ -78,7 +78,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                My Profile
+                โปรไฟล์
               </Link>
             </li>
             <li>
@@ -99,7 +99,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                My Contacts
+                ช่องทางการติดต่อ
               </Link>
             </li>
             <li>
@@ -124,7 +124,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                Account Settings
+                ตั้งค่า
               </Link>
             </li>
           </ul>
@@ -146,7 +146,7 @@ const DropdownUser = () => {
                 fill=""
               />
             </svg>
-            Log Out
+            ออกจากระบบ
           </button>
         </div>
       )}
