@@ -90,7 +90,18 @@ const options: ApexOptions = {
   xaxis: {
     type: "category",
     categories: [
-      "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค."
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
     ],
     axisBorder: {
       show: false,
@@ -119,16 +130,16 @@ interface ChartOneState {
 
 const ChartOne: React.FC = () => {
   const series = [
-    {
-      name: "Product One",
-      data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30, 45],
-    },
+      {
+        name: "Product One",
+        data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30, 45],
+      },
 
-    {
-      name: "Product Two",
-      data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 51],
-    },
-  ]
+      {
+        name: "Product Two",
+        data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 51],
+      },
+    ]
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
@@ -139,7 +150,7 @@ const ChartOne: React.FC = () => {
               <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-primary"></span>
             </span>
             <div className="w-full">
-              <p className="font-semibold text-primary">รายได้รวม</p>
+              <p className="font-semibold text-primary">Total Revenue</p>
               <p className="text-sm font-medium">12.04.2022 - 12.05.2022</p>
             </div>
           </div>
@@ -148,7 +159,7 @@ const ChartOne: React.FC = () => {
               <span className="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
             </span>
             <div className="w-full">
-              <p className="font-semibold text-secondary">ยอดขายรวม</p>
+              <p className="font-semibold text-secondary">Total Sales</p>
               <p className="text-sm font-medium">12.04.2022 - 12.05.2022</p>
             </div>
           </div>
@@ -156,13 +167,13 @@ const ChartOne: React.FC = () => {
         <div className="flex w-full max-w-45 justify-end">
           <div className="inline-flex items-center rounded-md bg-whiter p-1.5 dark:bg-meta-4">
             <button className="rounded bg-white px-3 py-1 text-xs font-medium text-black shadow-card hover:bg-white hover:shadow-card dark:bg-boxdark dark:text-white dark:hover:bg-boxdark">
-              วัน
+              Day
             </button>
             <button className="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark">
-              สัปดาห์
+              Week
             </button>
             <button className="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark">
-              เดือน
+              Month
             </button>
           </div>
         </div>
