@@ -12,31 +12,26 @@ import SwitcherTwo from "@/components/Switchers/SwitcherTwo";
 import DatePickerTwo from "@/components/FormElements/DatePicker/DatePickerTwo";
 import DatePickerOne from "@/components/FormElements/DatePicker/DatePickerOne";
 import MultiSelect from "@/components/FormElements/MultiSelect";
-import SingleSelect from "@/components/FormElements/SingleSelect";
 import SelectGroupTwo from "@/components/SelectGroup/SelectGroupTwo";
 
 const FormElements = () => {
   return (
     <>
-      <Breadcrumb pageName="แก้ไขข้อมูลสินค้า" />
+      <Breadcrumb pageName="FormElements" />
 
-      <div className="grid grid-cols-1 gap-9 sm:grid-cols-1">
+      <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
         <div className="flex flex-col gap-9">
           {/* <!-- Input Fields --> */}
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
               <h3 className="font-medium text-black dark:text-white">
-                ข้อมูลสินค้า
+                Input Fields
               </h3>
             </div>
-           
             <div className="flex flex-col gap-5.5 p-6.5">
-             
-              <MultiSelect id="multiSelect" />
-            
               <div>
                 <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                  ชื่อสินค้า
+                  Default Input
                 </label>
                 <input
                   type="text"
@@ -45,9 +40,18 @@ const FormElements = () => {
                 />
               </div>
 
-             
+              <div>
+                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+                  Active Input
+                </label>
+                <input
+                  type="text"
+                  placeholder="Active Input"
+                  className="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                />
+              </div>
 
-              {/* <div>
+              <div>
                 <label className="mb-3 block text-sm font-medium text-black dark:text-white">
                   Disabled label
                 </label>
@@ -57,12 +61,12 @@ const FormElements = () => {
                   disabled
                   className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary dark:disabled:bg-black"
                 />
-              </div> */}
+              </div>
             </div>
           </div>
 
           {/* <!-- Toggle switch input --> */}
-          {/* <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
               <h3 className="font-medium text-black dark:text-white">
                 Toggle switch input
@@ -74,10 +78,10 @@ const FormElements = () => {
               <SwitcherThree />
               <SwitcherFour />
             </div>
-          </div> */}
+          </div>
 
           {/* <!-- Time and date --> */}
-          {/* <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
               <h3 className="font-medium text-black dark:text-white">
                 Time and date
@@ -87,19 +91,19 @@ const FormElements = () => {
               <DatePickerOne />
               <DatePickerTwo />
             </div>
-          </div> */}
+          </div>
 
           {/* <!-- File upload --> */}
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
               <h3 className="font-medium text-black dark:text-white">
-                อัพโหลดรูปภาพ
+                File upload
               </h3>
             </div>
             <div className="flex flex-col gap-5.5 p-6.5">
               <div>
                 <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                  แนบไฟล์
+                  Attach file
                 </label>
                 <input
                   type="file"
@@ -109,7 +113,7 @@ const FormElements = () => {
 
               <div>
                 <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                  ไฟล์แนบก่อนหน้า
+                  Attach file
                 </label>
                 <input
                   type="file"
@@ -120,30 +124,81 @@ const FormElements = () => {
           </div>
         </div>
 
-        
-      </div>
-      
-      <div className="flex justify-center gap-6 mt-6">
-  <button
-    className="flex justify-center items-center rounded border border-stroke px-6 py-2 font-medium text-black hover:shadow-md dark:border-strokedark dark:text-white"
-    type="button"
-  >
-    ยกเลิก
-  </button>
-  <button
-    className="flex justify-center items-center rounded bg-primary px-6 py-2 font-medium text-white hover:bg-opacity-90"
-    type="submit"
-  >
-    บันทึก
-  </button>
-  <button
-    className="flex justify-center items-center rounded bg-red-500 px-6 py-2 font-medium text-white hover:bg-red-400"
-    type="button"
-  >
-    ลบข้อมูล
-  </button>
-</div>
+        <div className="flex flex-col gap-9">
+          {/* <!-- Textarea Fields --> */}
+          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+            <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
+              <h3 className="font-medium text-black dark:text-white">
+                Textarea Fields
+              </h3>
+            </div>
+            <div className="flex flex-col gap-5.5 p-6.5">
+              <div>
+                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+                  Default textarea
+                </label>
+                <textarea
+                  rows={6}
+                  placeholder="Default textarea"
+                  className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                ></textarea>
+              </div>
 
+              <div>
+                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+                  Active textarea
+                </label>
+                <textarea
+                  rows={6}
+                  placeholder="Active textarea"
+                  className="w-full rounded-lg border-[1.5px] border-primary bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:text-white"
+                ></textarea>
+              </div>
+
+              <div>
+                <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+                  Disabled textarea
+                </label>
+                <textarea
+                  rows={6}
+                  disabled
+                  placeholder="Disabled textarea"
+                  className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary dark:disabled:bg-black"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          {/* <!-- Checkbox and radio --> */}
+          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+            <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
+              <h3 className="font-medium text-black dark:text-white">
+                Checkbox and radio
+              </h3>
+            </div>
+            <div className="flex flex-col gap-5.5 p-6.5">
+              <CheckboxOne />
+              <CheckboxTwo />
+              <CheckboxThree />
+              <CheckboxFour />
+              <CheckboxFive />
+            </div>
+          </div>
+
+          {/* <!-- Select input --> */}
+          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+            <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
+              <h3 className="font-medium text-black dark:text-white">
+                Select input
+              </h3>
+            </div>
+            <div className="flex flex-col gap-5.5 p-6.5">
+              <SelectGroupTwo />
+              <MultiSelect id="multiSelect" />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

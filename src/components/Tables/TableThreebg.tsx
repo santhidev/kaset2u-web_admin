@@ -2,28 +2,28 @@ import { Package } from "@/types/package";
 
 const packageData: Package[] = [
   {
-    name: "ส้ม",
-    price: 10.0,
-    category: "ผลไม้",
+    name: "Free package",
+    price: 0.0,
+    invoiceDate: `Jan 13,2023`,
     status: "Paid",
   },
   {
-    name: "มะม่วง",
-    price: 20.0,
-    category: "ผลไม้",
+    name: "Standard Package",
+    price: 59.0,
+    invoiceDate: `Jan 13,2023`,
     status: "Paid",
   },
   {
-    name: "ลำใย",
-    price: 30.0,
-    category: "ผลไม้",
-    status: "Paid",
+    name: "Business Package",
+    price: 99.0,
+    invoiceDate: `Jan 13,2023`,
+    status: "Unpaid",
   },
   {
-    name: "มังคุด",
-    price: 40.0,
-    category: "ผลไม้",
-    status: "Paid",
+    name: "Standard Package",
+    price: 59.0,
+    invoiceDate: `Jan 13,2023`,
+    status: "Pending",
   },
 ];
 
@@ -35,10 +35,10 @@ const TableThree = () => {
           <thead>
             <tr className="bg-gray-2 text-left dark:bg-meta-4">
               <th className="min-w-[220px] px-4 py-4 font-medium text-black dark:text-white xl:pl-11">
-                ชื่อ
+                Package
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-black dark:text-white">
-                หมวดหมู่
+                Invoice date
               </th>
               <th className="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white">
                 Status
@@ -59,7 +59,7 @@ const TableThree = () => {
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <p className="text-black dark:text-white">
-                    {packageItem.category}
+                    {packageItem.invoiceDate}
                   </p>
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
